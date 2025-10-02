@@ -10,13 +10,31 @@
 int main(int argc, const char * argv[]) {
     // insert code here...
     int a, b;
-    int sum=0;
-    printf("정수 하나를 입력하시오.: ");
-    scanf("%i", &a);
+    char ch;
+    int r;
     
-    for(b=1;b<=a;b++)
-        sum = sum + b;
-     
-        printf("합은 %i 입니다.\n", sum);
+    printf("계산식을 입력하시오.: ");
+    scanf("%i%c%i", &a, &ch, &b);
+    
+    switch(ch)
+    {
+        case '+':
+            r = a+b;
+            break;
+            
+        case '-':
+            r = a-b;
+            break;
+            
+        case '*':
+            r = a*b;
+            break;
+            
+        case '/':
+            r = a/b;
+            break;
+    }
+            printf("=%i\n", r);
+    
     return 0;
 }
